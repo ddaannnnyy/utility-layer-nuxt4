@@ -1,4 +1,4 @@
-import { returnDaysSince } from "../../../utils/returnDaysSince";
+import { returnDaysSince } from "../../utils/returnDaysSince";
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 
 describe("returnDaysSince", () => {

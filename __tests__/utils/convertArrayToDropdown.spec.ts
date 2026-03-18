@@ -1,26 +1,33 @@
-import { convertArrayToDropdown } from "../../../utils/convertArrayToDropdown";
+import { convertArrayToDropdown } from "../../utils/convertArrayToDropdown";
 import { describe, it, expect, vi } from "vitest";
+
+type UUID = `${string}-${string}-${string}-${string}-${string}`;
 
 describe("convertArrayToDropdown", () => {
   it("should convert string array into dropdown options", () => {
-    const mockUUID = vi
-      .spyOn(globalThis.crypto, "randomUUID")
-      .mockReturnValue("0000-0000-0046-0000-0000");
+
+    // Mock the return of randomUUID
+    const mockUUID = vi.spyOn(globalThis.crypto, "randomUUID")
+      .mockReturnValue("0000-0000-0000-0000-0000" as UUID);
+
 
     const inputArray = ["Forms", "Documents", "Tools", "Calculators"];
 
     const result = convertArrayToDropdown(inputArray);
     expect(result).toEqual([
-      { id: "0000-0000-0046-0000-0000", label: "Forms", emit: "Forms" },
-      { id: "0000-0000-0046-0000-0000", label: "Documents", emit: "Documents" },
-      { id: "0000-0000-0046-0000-0000", label: "Tools", emit: "Tools" },
       {
-        id: "0000-0000-0046-0000-0000",
-        label: "Calculators",
-        emit: "Calculators",
+        id: "0000-0000-0000-0000-0000", label: "Forms", emit: "Forms"
+      },
+      {
+        id: "0000-0000-0000-0000-0000", label: "Documents", emit: "Documents"
+      },
+      {
+        id: "0000-0000-0000-0000-0000", label: "Tools", emit: "Tools"
+      },
+      {
+        id: "0000-0000-0000-0000-0000", label: "Calculators", emit: "Calculators",
       },
     ]);
-
     mockUUID.mockRestore();
   });
 
@@ -37,10 +44,8 @@ describe("convertArrayToDropdown", () => {
       "0000-0000-0046-0000-0002",
       "0000-0000-0046-0000-0003",
     ];
-    const mockUUID = vi
-      .spyOn(globalThis.crypto, "randomUUID")
-      // @ts-ignore
-      .mockImplementation(() => uuids.shift());
+    const mockUUID = vi.spyOn(globalThis.crypto, "randomUUID")
+      .mockImplementation(() => uuids.shift() as UUID);
 
     const input = ["Red", "Green", "Blue"];
     const result = convertArrayToDropdown(input);

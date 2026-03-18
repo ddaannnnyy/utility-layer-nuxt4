@@ -1,4 +1,4 @@
-import { returnCountdown } from "../../../utils/returnCountdown";
+import { returnCountdown } from "../../utils/returnCountdown";
 import { describe, it, expect, vi } from "vitest";
 
 describe("returnCountdown", () => {

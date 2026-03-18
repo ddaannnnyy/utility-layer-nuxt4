@@ -6,7 +6,7 @@ describe("useRemoveUrlHash", async () => {
 
   const { navigateTo } = await import("#imports");
   const { useRemoveUrlHash } = await import(
-    "../../../composables/useRemoveUrlHash"
+    "../../composables/useRemoveUrlHash"
   );
 
   beforeEach(() => {

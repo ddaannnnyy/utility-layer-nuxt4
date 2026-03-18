@@ -1,4 +1,4 @@
-import { returnArrayPick } from "../../../utils/returnArrayPick";
+import { returnArrayPick } from "../../utils/returnArrayPick";
 import { describe, it, expect } from "vitest";
 
 describe("returnArrayPick", () => {

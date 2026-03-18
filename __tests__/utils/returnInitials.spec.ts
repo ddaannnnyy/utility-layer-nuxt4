@@ -1,4 +1,4 @@
-import { returnInitials } from "../../../utils/returnInitials";
+import { returnInitials } from "../../utils/returnInitials";
 import { describe, it, expect } from "vitest";
 
 describe("returnInitials", () => {

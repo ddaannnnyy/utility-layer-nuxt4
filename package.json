@@ -1,5 +1,5 @@
 {
-  "name": "layer-utility",
+  "name": "utility-layer-nuxt4",
   "type": "module",
   "version": "1.0.0",
   "main": "./nuxt.config.ts",

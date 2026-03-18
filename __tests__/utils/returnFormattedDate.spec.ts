@@ -1,4 +1,4 @@
-import { returnFormattedDate } from "../../../utils/returnFormattedDate";
+import { returnFormattedDate } from "../../utils/returnFormattedDate";
 import { describe, it, expect } from "vitest";
 
 describe("returnFormattedDate", () => {

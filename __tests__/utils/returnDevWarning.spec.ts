@@ -1,4 +1,4 @@
-import { returnDevWarning } from "../../../utils/returnDevWarning";
+import { returnDevWarning } from "../../utils/returnDevWarning";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 describe("returnDevWarning", () => {

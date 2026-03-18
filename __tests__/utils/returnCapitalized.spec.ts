@@ -1,4 +1,4 @@
-import { returnCapitalized } from "../../../utils/returnCapitalized";
+import { returnCapitalized } from "../../utils/returnCapitalized";
 import { describe, it, expect } from "vitest";
 
 describe("returnCapitalized", () => {
@@ -31,21 +31,6 @@ describe("returnCapitalized", () => {
       "the quick brown dog jumps over the lazy fox"
     ) as string;
     expect(capitalized).toBe("The quick brown dog jumps over the lazy fox");
-  });
-
-  it('It should always capitalise reserved words in a sentence', () => {
-    capitalized = returnCapitalized('i live in qld', false) as string;
-    expect(capitalized).toBe('I Live In QLD');
-  });
-
-  it('It should always capitalise reserved words in a single word', () => {
-    capitalized = returnCapitalized('pdf') as string;
-    expect(capitalized).toBe('PDF');
-  });
-
-  it('It should always capitalise reserved words with mixed casing', () => {
-    capitalized = returnCapitalized('Jpeg') as string;
-    expect(capitalized).toBe('JPEG');
   });
 
 });

@@ -1,4 +1,4 @@
-import { returnPluralized } from "../../../utils/returnPluralized";
+import { returnPluralized } from "../../utils/returnPluralized";
 import { describe, it, expect } from "vitest";
 
 describe("returnPluralized", () => {

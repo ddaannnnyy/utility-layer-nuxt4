@@ -1,4 +1,4 @@
-import { returnArrayToList } from "../../../utils/returnArrayToList";
+import { returnArrayToList } from "../../utils/returnArrayToList";
 import { describe, it, expect } from "vitest";
 
 describe("returnArrayToList", () => {

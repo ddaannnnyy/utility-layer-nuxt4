@@ -1,4 +1,4 @@
-import { returnCurrencyFormat } from "../../../utils/returnCurrencyFormat";
+import { returnCurrencyFormat } from "../../utils/returnCurrencyFormat";
 import { describe, it, expect } from "vitest";
 
 describe("returnCurrencyFormat", () => {

@@ -1,4 +1,4 @@
-import { returnEmailValidity } from "../../../utils/returnEmailValidity";
+import { returnEmailValidity } from "../../utils/returnEmailValidity";
 import { describe, it, expect } from "vitest";
 
 describe("returnEmailValidity", () => {
