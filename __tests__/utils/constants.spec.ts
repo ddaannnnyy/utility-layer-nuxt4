@@ -10,5 +10,5 @@ describe("constants", () => {
         const overrides = useRuntimeConfig().public.capitalizeOverride as string[];
         const defaults = CONSTANTS.capitalisedWords;
         expect(defaults).includes(overrides[0]);
-    })
+    });
 });

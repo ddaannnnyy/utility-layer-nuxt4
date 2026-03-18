@@ -36,6 +36,7 @@ describe("convertArrayToDropdown", () => {
     const result = convertArrayToDropdown([]);
     expect(result).toEqual([]);
     expect(mockUUID).not.toHaveBeenCalled();
+    mockUUID.mockRestore();
   });
 
   it("should make sure that unique IDs are generated", () => {

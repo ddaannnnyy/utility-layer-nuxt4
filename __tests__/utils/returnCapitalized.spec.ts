@@ -33,4 +33,15 @@ describe("returnCapitalized", () => {
     expect(capitalized).toBe("The quick brown dog jumps over the lazy fox");
   });
 
+  it('Should return words from Constants as their capitalised versiom', () => {
+    capitalized = returnCapitalized('pdf');
+    expect(capitalized).toBe('PDF');
+  });
+
+
+  it.todo('', () => {
+    capitalized = returnCapitalized('pdf, png, and xml allowed');
+    expect(capitalized).toBe('PDF, PNG, and XML allowed');
+  });
+
 });
