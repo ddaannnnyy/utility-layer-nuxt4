@@ -1,4 +1,5 @@
 import { returnDevWarning } from "../../utils/returnDevWarning";
+import * as devWarningModule from "../../utils/returnDevWarning";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 describe("returnDevWarning", () => {
@@ -62,6 +63,18 @@ describe("returnDevWarning", () => {
             expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
             expect(consoleLogSpy).not.toHaveBeenCalled();
         }
+    });
+    it("should not call console.log, console.info, console.warn, or console.error when not in development mode", () => {
+        const message = "Test warning message";
+        returnDevWarning(message);
+
+        vi.spyOn(devWarningModule, 'isDev').mockReturnValue(false);
+        returnDevWarning(message);
+        expect(consoleLogSpy).not.toHaveBeenCalled();
+        expect(consoleInfoSpy).not.toHaveBeenCalled();
+        expect(consoleWarnSpy).not.toHaveBeenCalled();
+        expect(consoleErrorSpy).not.toHaveBeenCalled();
+        vi.spyOn(devWarningModule, 'isDev').mockRestore();
     });
 });
 

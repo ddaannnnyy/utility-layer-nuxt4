@@ -59,4 +59,8 @@ describe("convertArrayToDropdown", () => {
 
     mockUUID.mockRestore();
   });
+  it.todo('should return different ids for duplicate named strings');
+  it.todo('should return empty array when supplied empty array');
+  it.todo('should skip undefined values in array');
+  it.todo('should not skip falsey values in array');
 });

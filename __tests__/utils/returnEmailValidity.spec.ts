@@ -39,4 +39,5 @@ describe("returnEmailValidity", () => {
       expect(returnEmailValidity(email)).toBe(false);
     });
   });
+  it.todo('should return false for null or undefined email addresses')
 });

@@ -1,24 +1,19 @@
+export const isDev = () => import.meta.dev;
+
 export function returnDevWarning(msg: string, type?: 'info' | 'warn' | 'error') {
+    if (!isDev()) return;
     switch (type) {
         case 'info':
-            if (import.meta.dev) {
-                console.info(msg);
-            }
+            console.info(msg);
             return;
         case 'warn':
-            if (import.meta.dev) {
-                console.warn(msg);
-            }
+            console.warn(msg);
             return;
         case 'error':
-            if (import.meta.dev) {
-                console.error(msg);
-            }
+            console.error(msg);
             return;
         default:
-            if (import.meta.dev) {
-                console.log(msg);
-            }
+            console.log(msg);
             return;
     }
 }

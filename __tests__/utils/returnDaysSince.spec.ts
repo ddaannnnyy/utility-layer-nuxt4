@@ -1,5 +1,5 @@
 import { returnDaysSince } from "../../utils/returnDaysSince";
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import { describe, it, expect, afterEach, vi } from "vitest";
 
 describe("returnDaysSince", () => {
   afterEach(() => {
@@ -31,4 +31,7 @@ describe("returnDaysSince", () => {
     const result = returnDaysSince("2025-10-14T00:00:00Z");
     expect(Math.floor(result)).toBe(0);
   });
+  it.todo('should return a negative number when date supplied is in the future');
+  it.todo('should return when provided invalid date');
+  it.todo('should work with any valid date supplied. E.g. string, number, Date');
 });
