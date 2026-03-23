@@ -1,4 +1,4 @@
-import { returnPercentageThrough } from "../../../utils/returnPercentageThrough";
+import { returnPercentageThrough } from "../../utils/returnPercentageThrough";
 import { describe, it, expect, vi } from "vitest";
 
 describe("returnPercentageThrough", () => {

@@ -1,9 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { setupNuxtMocks } from "../../utils/setupNuxtMocks";
+import { setupNuxtMocks } from "../setup/setupNuxtMocks";
 
 describe("useRouteCheck", async () => {
   const nuxtMocks = setupNuxtMocks();
-  const { useRouteCheck } = await import("../../../composables/useRouteCheck");
 
   let useRouterMock: ReturnType<typeof vi.fn>;
 

@@ -1,4 +1,4 @@
-import { returnStrippedEmail } from "../../../utils/returnStrippedEmail";
+import { returnStrippedEmail } from "../../utils/returnStrippedEmail";
 import { describe, it, expect } from "vitest";
 
 describe("returnStrippedEmail", () => {

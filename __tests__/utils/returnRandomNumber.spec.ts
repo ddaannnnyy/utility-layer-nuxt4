@@ -1,4 +1,4 @@
-import { returnRandomNumber } from "../../../utils/returnRandomNumber";
+import { returnRandomNumber } from "../../utils/returnRandomNumber";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
 describe("returnRandomNumber", () => {
@@ -37,4 +37,6 @@ describe("returnRandomNumber", () => {
     const result = returnRandomNumber(-5, 5);
     expect(result).toBe(41);
   });
+  it.todo('should return min when min === max');
+  it.todo('should return undefined when max < min');
 });

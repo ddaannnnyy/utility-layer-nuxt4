@@ -1,8 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { setupNuxtMocks } from "../../utils/setupNuxtMocks";
+import { setupNuxtMocks } from "../setup/setupNuxtMocks";
 
 describe("useRemoveUrlQuery", async () => {
-  const { useRemoveUrlQuery } = await import("../../../composables/useRemoveUrlQuery");
   const nuxtMocks = setupNuxtMocks();
   const consoleSpy = vi.spyOn(console, "warn").mockImplementation(() => { });
 

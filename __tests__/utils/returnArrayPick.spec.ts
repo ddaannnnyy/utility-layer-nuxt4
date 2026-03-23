@@ -1,4 +1,4 @@
-import { returnArrayPick } from "../../../utils/returnArrayPick";
+import { returnArrayPick } from "../../utils/returnArrayPick";
 import { describe, it, expect } from "vitest";
 
 describe("returnArrayPick", () => {
@@ -38,5 +38,9 @@ describe("returnArrayPick", () => {
       const result = returnArrayPick<string>([], "name");
       expect(result).toEqual([]);
     });
+    it.todo('should not filter out falsy data');
+    it.todo('should not filter out undefined data');
+    it.todo('should filter data if parameter is set for falsy data');
+    it.todo('should filter data if parameter is set for undefined data');
   });
 });

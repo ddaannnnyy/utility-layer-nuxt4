@@ -1,4 +1,4 @@
-import { returnCurrencyFormat } from "../../../utils/returnCurrencyFormat";
+import { returnCurrencyFormat } from "../../utils/returnCurrencyFormat";
 import { describe, it, expect } from "vitest";
 
 describe("returnCurrencyFormat", () => {
@@ -29,4 +29,6 @@ describe("returnCurrencyFormat", () => {
     const result = returnCurrencyFormat();
     expect(result).toBeUndefined();
   });
+  it.todo("should successfully format negative numbers");
+  it.todo("should correctly update currency when passed alternative parameters");
 });

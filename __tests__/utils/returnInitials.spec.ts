@@ -1,4 +1,4 @@
-import { returnInitials } from "../../../utils/returnInitials";
+import { returnInitials } from "../../utils/returnInitials";
 import { describe, it, expect } from "vitest";
 
 describe("returnInitials", () => {
@@ -31,6 +31,16 @@ describe("returnInitials", () => {
     const result = returnInitials(["K", "Z"]);
     expect(result).toBe("KZ");
   });
+
+  it('should handle names with more than two values', () => {
+    const result = returnInitials(["Emily", "St. John", "Mandel"]);
+    expect(result).toBe('ESM');
+  });
+
+  it.todo('should handle double barrel surnames as multi word names', () => {
+    const result = returnInitials(["Coralie Bickford-Smith"]);
+    expect(result).toBe('CBS');
+  })
 
   it("should handle words that are empty strings only", () => {
     const result = returnInitials(["", ""]);

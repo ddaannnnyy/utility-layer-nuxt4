@@ -4,11 +4,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/scripts", '@vueuse/nuxt', '@nuxt/test-utils/module'],
   runtimeConfig: {
-    name: 'layer-utility',
+    name: 'utility-layer-nuxt4',
     version: {
       version: 'v1.0.0',
       fatal: false,
       breakingChanges: false
+    },
+    public: {
+      capitalizeOverride: [
+        'Y2K'
+      ]
     }
   }
 })

@@ -1,4 +1,4 @@
-import { returnEmailValidity } from "../../../utils/returnEmailValidity";
+import { returnEmailValidity } from "../../utils/returnEmailValidity";
 import { describe, it, expect } from "vitest";
 
 describe("returnEmailValidity", () => {
@@ -39,4 +39,5 @@ describe("returnEmailValidity", () => {
       expect(returnEmailValidity(email)).toBe(false);
     });
   });
+  it.todo('should return false for null or undefined email addresses')
 });

@@ -1,4 +1,4 @@
-import { returnRemoveSpecialCharacters } from "../../../utils/returnRemoveSpecialCharacters";
+import { returnRemoveSpecialCharacters } from "../../utils/returnRemoveSpecialCharacters";
 import { describe, it, expect } from "vitest";
 
 describe("returnRemoveSpecialCharacters", () => {
