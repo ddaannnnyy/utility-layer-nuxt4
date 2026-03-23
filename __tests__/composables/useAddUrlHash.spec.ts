@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { setupNuxtMocks } from "~/test/setup/setupNuxtMocks";
+import { setupNuxtMocks } from "../setup/setupNuxtMocks";
 
 describe("useAddUrlHash", async () => {
   const nuxtMocks = setupNuxtMocks();
