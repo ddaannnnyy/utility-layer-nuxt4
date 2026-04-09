@@ -4,6 +4,13 @@
  * By no means an exhaustive list, this is updated on a needs basis
  */
 // const overrides: string[] = 
+function capitalisedOverrides(): string[] {
+    const nuxtApp = tryUseNuxtApp();
+    if (!nuxtApp) return [];
+    const extras = useRuntimeConfig().public.capitalizeOverride as string[];
+    return extras;
+}
+
 export const CONSTANTS = {
     capitalisedWords: [
         'QLD',
@@ -29,7 +36,7 @@ export const CONSTANTS = {
         'B2B',
         'B2C',
         'CI/CD',
-        ...useRuntimeConfig().public.capitalizeOverride as string[]
+        ...capitalisedOverrides()
     ],
 
 }
