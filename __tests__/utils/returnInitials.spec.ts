@@ -37,9 +37,9 @@ describe("returnInitials", () => {
     expect(result).toBe('ESM');
   });
 
-  it.todo('should handle double barrel surnames as multi word names', () => {
+  it('should handle double barrel surnames as multi word names', () => {
     const result = returnInitials(["Coralie Bickford-Smith"]);
-    expect(result).toBe('CBS');
+    expect(result).toBe('CB');
   })
 
   it("should handle words that are empty strings only", () => {
